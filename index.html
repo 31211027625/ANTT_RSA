@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RSA Signature</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Mã Hóa Bất Đối Xứng RSA</h1>
+            <div class="input-fields">
+                <div class="form-group">
+                    <label for="messageInput">Bản tin M: </label>
+                    <input
+                        type="text"
+                        class="form-control uppercase-input"
+                        id="messageInput"
+                        placeholder="Nhập bản tin"
+                        value="LEDINHNHATVU"
+                    />
+                </div>
+                <div class="prime">
+                    <div class="form-group">
+                        <label for="pInput">Giá trị p: </label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="pInput"
+                            placeholder="Nhập p"
+                            value="11"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="qInput">Giá trị q: </label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="qInput"
+                            placeholder="Nhập q"
+                            value="17"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="message mt-4">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="asciiTable">
+                        <thead>
+                            <tr id="messageRow"></tr>
+                            <tr id="asciiRow"></tr>
+                            <tr id="encryptedRow"></tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="result mt-4">
+                    <span id="result">Chữ ký số: </span>
+                </div>
+                <button
+                    class="btn btn-primary mt-4"
+                    onclick="generateSignature()"
+                >
+                    Generate
+                </button>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
